@@ -32,7 +32,25 @@
         return true;        
 
     }
+//Continuacion de practica 3
+const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }):number => {
+    let result:number;
+    if (isDead) {
+        result = 1500;
+    } else {
+        if (isSeparated) {
+            result = 2500;
+        } else {
+            if (isRetired) {
+                result = 3000;
+            } else {
+                result = 4000;
+            }
+        }
+    }
 
+    return result;
+}
     
 
 
